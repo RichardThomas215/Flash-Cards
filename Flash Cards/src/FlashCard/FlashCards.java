@@ -36,6 +36,22 @@ public class FlashCards {
 
 	}
 	public static void study () {
+		int counter = 0;
+		String UserInput;
+		Card temp;
+		
+		System.out.println("What would you Like to study/review?");
+		Scanner scan = new Scanner(System.in);
+		UserInput = scan.nextLine();
+		
+		while(counter <= list.size()-1) {
+			temp = list.get(counter);
+			
+		    if(UserInput.compareToIgnoreCase(temp.getFront()) == 0){
+		    	System.out.println(temp.getFront());
+		    	System.out.println(temp.getBack());
+		    }
+		}
 		
 	}
 	
