@@ -1,0 +1,12 @@
+
+.metadata/.lock
+*.cfs
+*.db
+*.log
+Projects/.project
+Projects/.classpath
+.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/http%3A%2F%2Fwww.eclipse.org%2Frecommenders%2Ffeeds%2Fide.rss
+.metadata/.plugins/org.eclipse.recommenders.news.impl/downloads/http%3A%2F%2Fwww.eclipse.org%2Fhome%2Feclipsenews.rss
+Card.java
+FlashCards.java
+Card.java
