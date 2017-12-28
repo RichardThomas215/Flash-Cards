@@ -35,6 +35,9 @@ public class FlashCards {
 		
 
 	}
+	public static void study () {
+		
+	}
 	
 	public static void test() {
 		int counter = 0;
