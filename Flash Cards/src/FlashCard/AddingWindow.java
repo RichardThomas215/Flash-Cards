@@ -2,6 +2,7 @@ package FlashCard;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -11,7 +12,7 @@ public class AddingWindow extends JFrame {
 	
 	public AddingWindow() {
 		
-		super("Please add your card");
+		super("Please make your card");
 		
 		JPanel p1 = new JPanel();
 		
@@ -35,6 +36,11 @@ public class AddingWindow extends JFrame {
 		p2.add(jt2, BorderLayout.AFTER_LAST_LINE);
 		add(p2, BorderLayout.SOUTH);
 		
+		JPanel p3 = new JPanel();
+		
+		JButton b1 = new JButton("Add");
+		p3.add(b1);
+		add(p3, BorderLayout.WEST);
 		
 		setSize(400, 200);
 		setVisible(true);
