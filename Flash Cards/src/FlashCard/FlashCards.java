@@ -50,6 +50,7 @@ public class FlashCards {
 		    if(UserInput.compareToIgnoreCase(temp.getFront()) == 0){
 		    	System.out.println(temp.getFront());
 		    	System.out.println(temp.getBack());
+		    	break;
 		    }
 		}
 		
@@ -104,7 +105,10 @@ public class FlashCards {
 				run++;
 			}if(Command.compareToIgnoreCase("display") == 0) {
 				display();
-			}if(Command.compareToIgnoreCase("test") == 0) {
+			}if(Command.compareToIgnoreCase("study") == 0) {
+				study();
+			}
+			if(Command.compareToIgnoreCase("test") == 0) {
 				test();
 				
 			}
