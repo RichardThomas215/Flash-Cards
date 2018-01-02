@@ -63,11 +63,5 @@ public class AddingWindow extends JFrame {
 		setSize(400, 200);
 		setVisible(true);
 	}
-
-	public static void main(String []args) {
-		
-		//AddingWindow w = new AddingWindow();
-		
-	}
  
 }

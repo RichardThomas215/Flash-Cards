@@ -43,13 +43,5 @@ public class FirstWindow extends JFrame {
 		setSize(400, 400);
 		setVisible(true);
 	}
-	
-	public static void main(String [] args) {
-		ArrayList<Card> list = new ArrayList<Card>();
-		
-		FirstWindow f = new FirstWindow(list);
-		f.setVisible(true);
-		
-	}
 
 }
