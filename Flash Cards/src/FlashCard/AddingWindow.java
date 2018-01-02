@@ -1,6 +1,9 @@
 package FlashCard;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -8,11 +11,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
 public class AddingWindow extends JFrame {
 	
-	public AddingWindow() {
-		
+	public AddingWindow(ArrayList<Card> list) {
+				
 		super("Please make your card");
+		
+		//final String frontH;
+		//final String backH;
 		
 		JPanel p1 = new JPanel();
 		
@@ -39,6 +46,17 @@ public class AddingWindow extends JFrame {
 		JPanel p3 = new JPanel();
 		
 		JButton b1 = new JButton("Add");
+		b1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String frontH = jt.getText();
+				String backH = jt2.getText();
+				
+			}
+			
+		});
+		
 		p3.add(b1);
 		add(p3, BorderLayout.WEST);
 		
@@ -48,7 +66,7 @@ public class AddingWindow extends JFrame {
 
 	public static void main(String []args) {
 		
-		AddingWindow w = new AddingWindow();
+		//AddingWindow w = new AddingWindow();
 		
 	}
  

@@ -4,6 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,7 +14,7 @@ import javax.swing.JPanel;
 
 public class FirstWindow extends JFrame {
 	
-	public FirstWindow() {
+	public FirstWindow(ArrayList<Card> list) {
 		
 		super("Welcome");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -24,7 +27,15 @@ public class FirstWindow extends JFrame {
 		
 		
 		JButton addB = new JButton("add");
-		
+		addB.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				AddingWindow aw = new AddingWindow(list);
+				aw.setVisible(true);
+			}
+			
+		});
 		p.add(addB);
 		
 		add(p,BorderLayout.CENTER);
@@ -34,8 +45,11 @@ public class FirstWindow extends JFrame {
 	}
 	
 	public static void main(String [] args) {
+		ArrayList<Card> list = new ArrayList<Card>();
 		
-		FirstWindow f = new FirstWindow();
+		FirstWindow f = new FirstWindow(list);
+		f.setVisible(true);
+		
 	}
 
 }
