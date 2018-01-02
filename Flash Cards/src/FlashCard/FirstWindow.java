@@ -25,7 +25,7 @@ public class FirstWindow extends JFrame {
 		
 		JPanel p = new JPanel();
 		
-		
+		// add button
 		JButton addB = new JButton("add");
 		addB.addActionListener(new ActionListener() {
 
@@ -36,9 +36,14 @@ public class FirstWindow extends JFrame {
 			}
 			
 		});
-		p.add(addB);
+		p.add(addB, BorderLayout.LINE_START);
 		
-		add(p,BorderLayout.CENTER);
+		// study button
+		JButton studyB = new JButton("study");
+		p.add(studyB, BorderLayout.CENTER);
+		
+		
+		add(p,BorderLayout.LINE_START);
 		 
 		setSize(400, 400);
 		setVisible(true);
