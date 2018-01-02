@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -15,7 +16,6 @@ import javax.swing.JTextField;
 public class AddingWindow extends JFrame {
 	
 
-	
 	public AddingWindow(ArrayList<Card> list) {
 				
 		super("Please make your card");
@@ -53,6 +53,8 @@ public class AddingWindow extends JFrame {
 				String backH = jt2.getText();
 				
 				createAndaddCard(list, frontH, backH);
+				
+				JOptionPane.showMessageDialog(null,"Card has been succesfully added" , "Complete", JOptionPane.PLAIN_MESSAGE);
 			}
 			
 		});
