@@ -14,12 +14,11 @@ import javax.swing.JTextField;
 
 public class AddingWindow extends JFrame {
 	
+
+	
 	public AddingWindow(ArrayList<Card> list) {
 				
 		super("Please make your card");
-		
-		//final String frontH;
-		//final String backH;
 		
 		JPanel p1 = new JPanel();
 		
@@ -53,6 +52,7 @@ public class AddingWindow extends JFrame {
 				String frontH = jt.getText();
 				String backH = jt2.getText();
 				
+				createAndaddCard(list, frontH, backH);
 			}
 			
 		});
@@ -63,5 +63,12 @@ public class AddingWindow extends JFrame {
 		setSize(400, 200);
 		setVisible(true);
 	}
+	
+	public static void createAndaddCard(ArrayList<Card> list,String f, String b) {
+		Card newCard = new Card(f, b);
+		list.add(newCard);
+	}
+	
+		
  
 }
