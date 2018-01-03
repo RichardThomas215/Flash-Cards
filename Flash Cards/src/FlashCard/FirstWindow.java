@@ -40,6 +40,15 @@ public class FirstWindow extends JFrame {
 		
 		// study button
 		JButton studyB = new JButton("study");
+		studyB.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				studyWindow sw = new studyWindow();
+				sw.setVisible(true);
+			}
+			
+		});
 		p.add(studyB, BorderLayout.CENTER);
 		
 		
