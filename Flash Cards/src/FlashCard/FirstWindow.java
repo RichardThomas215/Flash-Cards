@@ -52,6 +52,20 @@ public class FirstWindow extends JFrame {
 		});
 		p.add(studyB, BorderLayout.CENTER);
 		
+		JButton testB = new JButton("Test");
+		
+		testB.addActionListener(new ActionListener () {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				/
+				
+			}
+			
+			
+		});
+		
+		p.add(testB, BorderLayout.AFTER_LINE_ENDS);
 		
 		add(p,BorderLayout.LINE_START);
 		 
