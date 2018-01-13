@@ -44,7 +44,8 @@ public class FirstWindow extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				studyWindow sw = new studyWindow();
+				
+				studyWindow sw = new studyWindow(list);
 				sw.setVisible(true);
 			}
 			
