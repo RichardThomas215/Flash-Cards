@@ -40,7 +40,7 @@ public class AddingWindow extends JFrame {
 		//text field to enter the back
 		JTextField jt2 = new JTextField(10);
 		p2.add(jt2, BorderLayout.AFTER_LAST_LINE);
-		add(p2, BorderLayout.SOUTH);
+		add(p2, BorderLayout.WEST);
 		
 		JPanel p3 = new JPanel();
 		
@@ -60,7 +60,7 @@ public class AddingWindow extends JFrame {
 		});
 		
 		p3.add(b1);
-		add(p3, BorderLayout.WEST);
+		add(p3, BorderLayout.AFTER_LAST_LINE);
 		
 		setSize(400, 200);
 		setVisible(true);
