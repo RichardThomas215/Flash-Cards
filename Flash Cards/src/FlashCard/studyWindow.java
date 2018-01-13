@@ -21,18 +21,16 @@ public class studyWindow extends JFrame {
     public studyWindow(ArrayList<Card> list) {
     	
     	super("Reviewing");
-    	//setDefaultCloseOperation(EXIT_ON_CLOSE);
-    	
     	setSize(400, 400);
+    	
     	counter++;
     	System.out.println(counter);
     	
     	JPanel j1 = new JPanel ();
     	
-    	//while(counter <= list.size()-1) {
     		
     		temp = list.get(counter);
-    		//System.out.println("in loop");
+   
     		JLabel jFront = new JLabel(temp.getFront());
     		j1.add(jFront);
     		
@@ -42,9 +40,7 @@ public class studyWindow extends JFrame {
     		
     		JPanel j2 = new JPanel();
     		JButton jb = new JButton("Next");
-    		
-    		 
-    		 
+    			 
     		jb.addActionListener(new ActionListener() {
 
     			@Override
@@ -67,14 +63,7 @@ public class studyWindow extends JFrame {
     		
     		add(j2, BorderLayout.SOUTH);
     		
-    		
-    	//}
-    	
     	
     }
     
-    public void study(ArrayList<Card> list) {
-    	
-    	
-    }
 }
