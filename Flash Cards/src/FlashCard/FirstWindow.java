@@ -72,7 +72,6 @@ public class FirstWindow extends JFrame {
 		
 		add(p,BorderLayout.LINE_START);
 		 
-		setSize(400, 400);
 		setVisible(true);
 	}
 
