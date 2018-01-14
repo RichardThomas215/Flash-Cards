@@ -3,23 +3,27 @@ package FlashCard;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class testWindow extends JFrame{
 	
-	static int counter = 0;
+	static int counter = -1;
 	public testWindow(ArrayList<Card> list) {
 		
 		 super("Test");
 		 setSize(400,400);
 		 setLocationRelativeTo(null);
 		 
+		 counter++;
 		 Card temp = list.get(counter);
 		
 		 // panel 1
@@ -42,6 +46,13 @@ public class testWindow extends JFrame{
 			public void actionPerformed(ActionEvent arg0) {
 			String input =	jt.getText();
 				
+				if(input.compareToIgnoreCase(temp.getBack()) == 0) {
+					testWindow tw = new testWindow(list);
+					tw.setVisible(true);
+				}else {
+					JOptionPane.showMessageDialog(null,"Incorrect Answer Please try again" , "Incorrect", JOptionPane.PLAIN_MESSAGE);
+				}
+				
 			}
 			 
 		 });
@@ -49,6 +60,13 @@ public class testWindow extends JFrame{
 		 p2.add(checkB);
 		 add(p2, BorderLayout.SOUTH);
 		 
+		 addWindowListener(new WindowAdapter()
+	        {
+	            public void windowClosing(WindowEvent e)
+	            {
+	            	counter = -1;
+	            }
+	        });
 		 
 		 
 	}
