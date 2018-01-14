@@ -19,6 +19,7 @@ public class AddingWindow extends JFrame {
 	public AddingWindow(ArrayList<Card> list) {
 				
 		super("Please make your card");
+		setLocationRelativeTo(null);
 		
 		JPanel p1 = new JPanel();
 		
