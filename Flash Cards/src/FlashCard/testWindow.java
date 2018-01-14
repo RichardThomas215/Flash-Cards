@@ -1,6 +1,8 @@
 package FlashCard;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -19,21 +21,33 @@ public class testWindow extends JFrame{
 		 setLocationRelativeTo(null);
 		 
 		 Card temp = list.get(counter);
-		 
+		
+		 // panel 1
 		 JPanel p1 = new JPanel();
 		 
-		 JButton checkB = new JButton("Check");
-		 p1.add(checkB);
-		 add(p1, BorderLayout.SOUTH);
-		 
-		 JPanel p2 = new JPanel();
-		 
 		 JLabel jl1 = new JLabel(temp.getFront());
-		 p2.add(jl1, BorderLayout.CENTER);
+		 p1.add(jl1, BorderLayout.CENTER);
 		 
 		 JTextField jt = new JTextField(10);
-		 p2.add(jt, BorderLayout.SOUTH);
-		 add(p2, BorderLayout.CENTER);
+		 p1.add(jt, BorderLayout.SOUTH);
+		 add(p1, BorderLayout.CENTER);
+		 
+		 
+		 // panel 2
+		 JPanel p2 = new JPanel();
+		 JButton checkB = new JButton("Check");
+		 checkB.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+			String input =	jt.getText();
+				
+			}
+			 
+		 });
+		 
+		 p2.add(checkB);
+		 add(p2, BorderLayout.SOUTH);
 		 
 		 
 		 
