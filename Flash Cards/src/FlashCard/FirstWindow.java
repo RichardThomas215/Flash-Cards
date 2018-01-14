@@ -17,7 +17,9 @@ public class FirstWindow extends JFrame {
 	public FirstWindow(ArrayList<Card> list) {
 		
 		super("Welcome");
+		setSize(400, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.insets = new Insets(15,15, 15, 0);
@@ -58,8 +60,9 @@ public class FirstWindow extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				/
 				
+				testWindow tw = new testWindow(list);
+				tw.setVisible(true);
 			}
 			
 			

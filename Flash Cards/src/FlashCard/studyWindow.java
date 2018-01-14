@@ -22,10 +22,9 @@ public class studyWindow extends JFrame {
     	
     	super("Reviewing");
     	setSize(400, 400);
+    	setLocationRelativeTo(null);
     	
     	counter++;
-    	System.out.println(counter);
-    	
     	JPanel j1 = new JPanel ();
     	
     		
