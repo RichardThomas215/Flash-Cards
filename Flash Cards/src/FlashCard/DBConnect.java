@@ -39,4 +39,26 @@ public class DBConnect {
 			System.out.println(ex);
 		}
 	}
+	public Card getCard() throws SQLException {
+		
+		
+		try {
+			String query = "select * from cards";
+			 rs = st.executeQuery(query);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		rs.next();
+
+		String front = rs.getString("Front");
+		String back = rs.getString("Back");
+		
+		Card newCard = new Card(front, back);
+		
+		return newCard;
+		
+		
+		 
+	}
 }
