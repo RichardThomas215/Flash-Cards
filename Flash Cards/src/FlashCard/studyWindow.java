@@ -29,7 +29,14 @@ public class studyWindow extends JFrame {
     	JPanel j1 = new JPanel ();
     	
     		
-    		temp = list.get(counter);
+    		//temp = list.get(counter);
+    	DBConnect db = new DBConnect();
+    	try {
+			temp = db.getCard();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
    
     		JLabel jFront = new JLabel(temp.getFront());
     		j1.add(jFront);

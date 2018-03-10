@@ -1,5 +1,6 @@
 package FlashCard;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class main {
@@ -11,6 +12,7 @@ public class main {
 		FirstWindow f = new FirstWindow(list);
 		f.setVisible(true);
 		
+	
 	}
 
 }
