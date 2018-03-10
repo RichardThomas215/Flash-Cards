@@ -24,8 +24,8 @@ public class AddingWindow extends JFrame {
 		JPanel p1 = new JPanel();
 		
 		// the word Front
-		JLabel front = new JLabel("Front");
-		p1.add(front);
+		JLabel back= new JLabel("Back");
+		p1.add(back);
 		
 		// text field to enter the front
 		JTextField jt = new JTextField(10);
@@ -35,8 +35,8 @@ public class AddingWindow extends JFrame {
 		JPanel p2 = new JPanel();
 		
 		// the word back
-		JLabel back = new JLabel("Back");
-		p2.add(back);
+		JLabel Front = new JLabel("Front");
+		p2.add(Front);
 		
 		//text field to enter the back
 		JTextField jt2 = new JTextField(10);
@@ -50,8 +50,8 @@ public class AddingWindow extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String frontH = jt.getText();
-				String backH = jt2.getText();
+				String frontH = jt2.getText();
+				String backH = jt.getText();
 				
 				createAndaddCard(list, frontH, backH);
 				
