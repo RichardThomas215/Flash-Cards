@@ -22,52 +22,52 @@ public class FlashCards {
 	public static void display() {
 		int counter = 0;
 		Card temp;
-		
+
 		while (counter <= list.size()-1) {
-			
+
 		temp = list.get(counter);
-			
+
 		System.out.println(temp.front);
 		System.out.println(temp.back);
 		counter++;
-			
+
 		}
-		
+
 
 	}
 	public static void study () {
 		int counter = 0;
 		String UserInput;
 		Card temp;
-		
+
 		System.out.println("What would you Like to study/review?");
 		Scanner scan = new Scanner(System.in);
 		UserInput = scan.nextLine();
-		
+
 		while(counter <= list.size()-1) {
 			temp = list.get(counter);
-			
+
 		    if(UserInput.compareToIgnoreCase(temp.getFront()) == 0){
 		    	System.out.println(temp.getFront());
 		    	System.out.println(temp.getBack());
 		    	break;
 		    }
 		}
-		
+
 	}
-	
+
 	public static void test() {
 		int counter = 0;
 		String userIn;
 		Card temp;
-		
+
 		while(counter <= list.size()-1) {
-			
+
 			temp = list.get(counter);
 			System.out.println(temp.getFront());
 			Scanner userI = new Scanner(System.in);
 			userIn = userI.nextLine();
-			
+
 			if(userIn.compareToIgnoreCase(temp.getBack()) == 0) {
 				System.out.println("Correct!");
 				counter++;
@@ -100,7 +100,7 @@ public class FlashCards {
 				Back = scan3.nextLine();
 
 				createCard(Front, Back);
-				
+
 			}if (Command.compareToIgnoreCase("end") == 0) {
 				run++;
 			}if(Command.compareToIgnoreCase("display") == 0) {
@@ -110,7 +110,7 @@ public class FlashCards {
 			}
 			if(Command.compareToIgnoreCase("test") == 0) {
 				test();
-				
+
 			}
 		}
 	}
