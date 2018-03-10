@@ -29,14 +29,8 @@ public class studyWindow extends JFrame {
     	JPanel j1 = new JPanel ();
     	
     		
-    		//temp = list.get(counter);
-    	DBConnect db = new DBConnect();
-    	try {
-			temp = db.getCard();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+    		temp = list.get(counter);
+    	
    
     		JLabel jFront = new JLabel(temp.getFront());
     		j1.add(jFront);
@@ -52,6 +46,7 @@ public class studyWindow extends JFrame {
 
     			@Override
     			public void actionPerformed(ActionEvent e) {
+    			
     				studyWindow sw = new studyWindow(list);
     				sw.setVisible(true);
     			}
