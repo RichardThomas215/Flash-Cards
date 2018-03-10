@@ -1,6 +1,5 @@
 package FlashCard;
 
-
 public class Card {
 
  String front;	
